@@ -31,7 +31,7 @@
 
 			request.onreadystatechange = function() {
 				console.log("3 - readystatechange event fired.");
- 				request.status = 200;
+
 				if (request.readyState == 4 && request.status == 200) {
 
 					// Step 5: wait for done + success
@@ -40,7 +40,7 @@
 					alert(result)
 					show = JSON.parse(result);
 
-                    document.getElementById("data").innerHTML = "Info about show:::";
+                    document.getElementById("data").innerHTML = "Info about show:";
 					
 					document.getElementById("name").innerHTML = "Name of show: "
                                                     + show["name"];
@@ -86,6 +86,15 @@
     <div id="network">Loading...</div>
 
     <br><br>
+    <p>
+        NOTE:<br> THIS WORKS on my own computer but does not work when uploaded
+	    to Github. when i use the API on my computer, an alert pops up with
+	    the json and the correct information is outputted. However,
+	    when I upload it on gitbub, it says that something is wrong. I 
+	    took a picture of it working to prove that my code works. Also, I
+	    did not think I needed a key/code because I could access the info
+	    on my computer.
+    </p>
     <p>
         API Details:<br>
         The API that I selected is called TV MAZE. TV MAZE is an API in which
