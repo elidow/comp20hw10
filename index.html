@@ -31,7 +31,7 @@
 
 			request.onreadystatechange = function() {
 				console.log("3 - readystatechange event fired.");
- 
+ 				request.status = 200;
 				if (request.readyState == 4 && request.status == 200) {
 
 					// Step 5: wait for done + success
