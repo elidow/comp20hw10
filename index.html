@@ -39,6 +39,8 @@
 					result = request.responseText;
 					alert(result)
 					show = JSON.parse(result);
+
+                    document.getElementById("data").innerHTML = "Info about show:";
 					
 					document.getElementById("name").innerHTML = "Name of show: "
                                                     + show["name"];
@@ -76,7 +78,7 @@
 
     <h1 align="center">TV MAZE API</h1>
 
-    <h2>Info about show:</h2>
+    <div id="data">Info about show:</div>
 
     <div id="name">Loading...</div>
     <div id="rating">Loading...</div>
